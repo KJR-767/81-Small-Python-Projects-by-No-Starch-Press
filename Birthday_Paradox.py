@@ -22,10 +22,12 @@ def getMatch(birthdays):
 print ('''The birthday Paradox shows us that in a group on N people, the odds
       that to of them have matching birthdays is suprising large.
       this program does a Monte carlo simulation (that is, repeated random
-      simulations) to explore this concept.end=
-      (Its not actually a paradox, it's just a suprising result.''')
+      simulations) to explore this concept.
+      
+     (Its not actually a paradox, it's just a suprising result.''')
 
-# Refer to Birthday Paradox.txt for info (Using a Tuple over a List)
+# Refer to Birthday Paradox txt for info Using a Tuple over a List.
+
 MONTHS = ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
           'Aug', 'Sep', 'Oct', 'Nov', 'Dec')
 
@@ -42,9 +44,9 @@ birthdays = getBirthdays(numBDays)
 for i, birthday in enumerate(birthdays):
     if i != 0:
         print(', ', end='')
-        monthName = MONTHS[birthday.month - 1]
-        dateText = '{} {}'.format(monthName, birthday.day)
-        print(dateText, end='')
+    monthName = MONTHS[birthday.month - 1]
+    dateText = '{} {}'.format(monthName, birthday.day)
+    print(dateText, end='')
 print()
 print()
 
@@ -59,20 +61,25 @@ else:
     print('there are no matching birthdays.')
 print()
 
+# problem
+
+print('Generating', numBDays, 'random birthdays 100,000 times...')
+input('Press Enter to begin...')
+
 print('Let\'s run another 100,000 simulations.')
 simMatch = 0 
-for i in range(100_000):
-    if i % 10_000 == 0:
+for i in range(100000):
+    if i % 10000 == 0:
         print(i, 'simulations run...')
-        birthdays = getBirthdays(numBDays)
-        if getMatch(birthdays) != None:
-            simMatch = simMatch + 1
+    birthdays = getBirthdays(numBDays)
+    if getMatch(birthdays) != None:
+        simMatch = simMatch + 1
 print('100,000 simulations run.')
 
-probality = round(simMatch / 100_000 * 100, 2)
+probability = round(simMatch / 100000 * 100, 2)
 print('Out of 100,000 simulations of' , numBDays, 'people, there was a ')
 print('matching birthday in that group', simMatch, 'times, This means')
-print('that', numBDays, 'people have a ', probality, '% chance of')
+print('that', numBDays, 'people have a ', probability, '% chance of')
 print('having a matching birthday in their group.')
 print('That\'s probally more than you would think!')
       

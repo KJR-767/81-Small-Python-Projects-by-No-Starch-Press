@@ -10,5 +10,33 @@ The main difference is that a tuple is immutable so its cant be changed
 in place after assignment, on the otehr hand a list is mutable, this means you can append,
 change, subtract and use other methods on it.
 
+I had a problem with the code below, this is the fixed version.
+
+print('Let\'s run another 100,000 simulations.')
+simMatch = 0 
+for i in range(100000):
+    if i % 10000 == 0:
+        print(i, 'simulations run...')
+    birthdays = getBirthdays(numBDays)
+    if getMatch(birthdays) != None:
+        simMatch = simMatch + 1
+print('100,000 simulations run.')
+
+There was an indentation error but took a long time for me to fix, originally i had 
+typed the following.
+
+print('Let\'s run another 100,000 simulations.')
+simMatch = 0 
+for i in range(100000):
+    if i % 10000 == 0:
+        print(i, 'simulations run...')
+        birthdays = getBirthdays(numBDays)
+        if getMatch(birthdays) != None:
+            simMatch = simMatch + 1
+print('100,000 simulations run.')
+
+Very simple problem but it was a very time consuming issue, in future take more time to 
+read the code before moving to the next block of code.
+
 
 
