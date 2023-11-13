@@ -1,0 +1,14 @@
+(Using a Tuple over a List)
+
+On line 28 i have used a tuple instead of a list, This is because 
+Tuples are faster than lists.
+
+Using a tuple Write-Protects the data so that it does not have to 
+be changed because the data need to stay constant.
+
+The main difference is that a tuple is immutable so its cant be changed 
+in place after assignment, on the otehr hand a list is mutable, this means you can append,
+change, subtract and use other methods on it.
+
+
+
