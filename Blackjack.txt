@@ -1,0 +1,16 @@
+Made some simple mistakes with indents and also a simple mistake at the end of the code.
+
+# I had a space before the underscore at the start.
+
+if __name__ == ' __main__':
+
+# Very simple correction but took about 10 mins to figure this out.
+
+if __name__ == '__main__':
+
+The code did not run atall with this error as the main function was not 
+being called as it was spelled wrong.
+
+Enjoyed writing this and i have a few ideas, i would love to implement this into a nice UI with interactive elements and 
+make an actual minigame out of this the default cards are functional but very crude, some nice cards drawn in photoshop
+would be a idea.
