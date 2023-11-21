@@ -1,0 +1,2 @@
+issue with the translated function, VS is stating not a defined variable 
+will fix this issue tomorrow.
